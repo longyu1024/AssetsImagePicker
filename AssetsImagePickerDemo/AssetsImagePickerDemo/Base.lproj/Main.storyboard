@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C31f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RHf-J9-4Ma">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--AssetsDemo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AssetsDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="拍照和相册集于一体的工具，方便、快捷、轻量。兼容iOS7+" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OZH-6a-oEr">
+                                <rect key="frame" x="60" y="120" width="480" height="360"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OZH-6a-oEr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EeB-WA-zds"/>
+                            <constraint firstItem="OZH-6a-oEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NOi-Y7-BBa"/>
+                            <constraint firstItem="OZH-6a-oEr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="jiK-e0-0xZ"/>
+                            <constraint firstItem="OZH-6a-oEr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="oQi-oB-pF2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AssetsDemo" id="FlR-Pk-qpz"/>
+                    <connections>
+                        <outlet property="assetsBtn" destination="TQ6-md-s5L" id="dHl-S2-IxY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TQ6-md-s5L">
+                    <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="相机／相册"/>
+                    <connections>
+                        <action selector="assetsBtnOnTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7oD-LN-3MU"/>
+                    </connections>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="1052" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OQf-RB-AiA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RHf-J9-4Ma" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DMl-hJ-Dws">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bEG-WL-UKR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ql4-BO-3kS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="1089"/>
+        </scene>
+    </scenes>
+</document>
